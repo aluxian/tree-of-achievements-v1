@@ -1,0 +1,26 @@
+.achievement {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.achievement:hover {
+    transform: scale(1.05);
+}
+
+#tree-container {
+    position: relative;
+}
+
+.achievement-node {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.achievement-node:hover {
+    transform: scale(1.2);
+}
