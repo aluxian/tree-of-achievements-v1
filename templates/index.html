@@ -10,10 +10,7 @@
 <body class="bg-green-100 min-h-screen flex flex-col items-center justify-center p-4">
     <h1 class="text-4xl font-bold text-green-800 mb-8">The TREE of Achievements</h1>
     <div id="tree-container" class="w-full max-w-3xl">
-        <img src="{{ url_for('static', filename='images/tree.svg') }}" alt="Achievement Tree" class="w-full">
-    </div>
-    <div id="achievements-container" class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <!-- Achievements will be dynamically inserted here -->
+        <!-- Tree structure will be dynamically inserted here -->
     </div>
     <div id="achievement-details" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
         <div class="bg-white p-6 rounded-lg max-w-md">

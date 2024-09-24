@@ -1,26 +1,80 @@
-.achievement {
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.achievement:hover {
-    transform: scale(1.05);
-}
-
 #tree-container {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
 .achievement-node {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #4CAF50;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    position: relative;
 }
 
-.achievement-node:hover {
-    transform: scale(1.2);
+.achievement-content {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.achievement-content:hover {
+    transform: scale(1.05);
+    background-color: #45a049;
+}
+
+.children-container {
+    display: flex;
+    justify-content: center;
+}
+
+.level-0 > .achievement-content {
+    background-color: #2196F3;
+}
+
+.level-1 > .achievement-content {
+    background-color: #4CAF50;
+}
+
+.level-2 > .achievement-content {
+    background-color: #FFC107;
+}
+
+/* Tree branches */
+.achievement-node::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 2px;
+    height: 10px;
+    background-color: #8B4513;
+}
+
+.achievement-node:first-child::before {
+    display: none;
+}
+
+.children-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 2px;
+    height: 10px;
+    background-color: #8B4513;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #tree-container {
+        flex-direction: column;
+    }
+
+    .children-container {
+        flex-direction: column;
+    }
 }
